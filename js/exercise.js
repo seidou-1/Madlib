@@ -19,7 +19,7 @@ if (nounInput && adjectiveInput && verbInput && submitButton && outputContainer)
     outputMadlib += " that was so ";
     outputMadlib += adjective;
     outputMadlib += " it looked like a marshmellow"
-    outputMadlib += "that loved to ";
+    outputMadlib += " that loved to ";
     outputMadlib += verb;
     outputMadlib += " everywhere. ";
     outputMadlib += " This madlib made no sense but the end.";
