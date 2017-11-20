@@ -15,7 +15,9 @@ if (userInputBox && submitUserInput && outputContainer) {
 //check to make sure all of these elements exist before targeting them. More optional but good to have.
 
 
-submitUserInput.addEventListener('click', function(){ //Capture the value fo the input element and store as a variable
+submitUserInput.addEventListener('click', function(event){ //Capture the value fo the input element and store as a variable
+
+//event.preventDefault(); not needed. only for when using a form
 var userName = userInputBox.value;
 //Dynamically build a string message based on user input
 var outputMessage = 'Welcome ';
