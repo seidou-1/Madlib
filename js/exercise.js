@@ -11,9 +11,12 @@ if (nounInput && adjectiveInput && verbInput && submitButton && outputContainer)
 
   submitButton.addEventListener('click', function(asap){
 
+    asap.preventDefault();
+
     var noun = nounInput.value;
     var adjective = adjectiveInput.value;
     var verb = verbInput.value;
+
     var outputMadlib = "Once upon a time there was a ";
     outputMadlib += noun;
     outputMadlib += " that was so ";
@@ -25,5 +28,9 @@ if (nounInput && adjectiveInput && verbInput && submitButton && outputContainer)
     outputMadlib += " This madlib made no sense but the end.";
 
     outputContainer.textContent = outputMadlib;
+
+    nounInput.value = "";
+    adjectiveInput.value ="";
+    verbInput.value = "";
   });
 }
