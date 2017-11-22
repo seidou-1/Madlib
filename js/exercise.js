@@ -11,7 +11,7 @@ if (nounInput && adjectiveInput && verbInput && submitButton && outputContainer)
 
   submitButton.addEventListener('click', function(asap){
 
-    asap.preventDefault();
+    asap.preventDefault(); //This forces the browser to forego the default behavior after a button is clicked and instead replace it with my code below.
 
     var noun = nounInput.value;
     var adjective = adjectiveInput.value;
@@ -32,5 +32,6 @@ if (nounInput && adjectiveInput && verbInput && submitButton && outputContainer)
     nounInput.value = "";
     adjectiveInput.value ="";
     verbInput.value = "";
+    
   });
 }
