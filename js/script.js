@@ -3,7 +3,7 @@
   3. Store the output in a container element to display
 */
 
-//Set the variables that are needed for our functionality
+//userInputBox, submitUserInput,and outputContainer are variables that are created that will be used for functionality and to also shorten the document.querySelector method so i don't have to type it completely.
 
 var userInputBox = document.querySelector('#user-name-input');
 
@@ -12,22 +12,23 @@ var submitUserInput = document.querySelector('#submit-user-name');
 var outputContainer = document.querySelector('#user-name-output');
 
 if (userInputBox && submitUserInput && outputContainer) {
-//check to make sure all of these elements exist before targeting them. More optional but good to have.
+//This if statement is to check to make sure all of these elements exist before targeting them. More optional but good to have.
 
 
-submitUserInput.addEventListener('click', function(event){ //Capture the value fo the input element and store as a variable
+submitUserInput.addEventListener('click', function(event){ //requires two argument. type of event we're listenign to and second, the call back function - what gets performed
 
 //event.preventDefault(); not needed. only for when using a form
-var userName = userInputBox.value;
-//Dynamically build a string message based on user input
-var outputMessage = 'Welcome ';
+var userName = userInputBox.value; // When you use querySelector you get the element itself. ".value" is going to go beyond that and get the value property of that element.
+
+
+var outputMessage = 'Welcome '; //Dynamically build a string message based on user input
 outputMessage += userName; //This concatinates to the above welcome message
 outputMessage += '!';
-//put the output message in the paragraph element to display it on the page
+
 outputContainer.textContent = outputMessage; //This will set the text that is currenlty displayed for that element. Essentially, taking this output element string and put it into the paragraph.
 
 
-//Longer way of doig it is... var outputMessage = 'Welcom ' + 'userName + '!';
+//Longer way of doig it is... var outputMessage = 'Welcome' + 'userName + '!'; += concatination is quicker
 
-});//requires two argument. type of event we're listenign to and second, the call back function - what gets performed
+});
 }
